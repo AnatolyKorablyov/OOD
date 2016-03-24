@@ -121,7 +121,13 @@ int main()
 		// добавляем пару кубиков льда
 		auto iceCubes = make_unique<CIceCubes>(move(lemon), 2, IceCubeType::Dry);
 		// добавляем 2 грамма шоколадной крошки
-		auto beverage = make_unique<CChocolateCrumbs>(move(iceCubes), 2);
+		auto crumbs = make_unique<CChocolateCrumbs>(move(iceCubes), 2);
+		// добавляем сливки
+		auto cream = make_unique<CCream>(move(crumbs));
+		//// добавляем шоколадный ликер
+		//auto liqour = make_unique<CLiquor>(move(cream), LiquorType::Chocolate);
+		// добавляем 3 дольки шоколада
+		auto beverage = make_unique<CChocolateSlices>(move(cream), 3);
 
 		// Выписываем счет покупателю
 		cout << beverage->GetDescription() << " costs " << beverage->GetCost() << endl;
