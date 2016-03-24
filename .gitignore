@@ -26,3 +26,13 @@
 *.exe
 *.out
 *.app
+
+# C++ ignore
+*.sdf
+*.log
+*.pdb
+*.ilk
+*.meta
+*.obj
+*.tlog
+*.ilk
