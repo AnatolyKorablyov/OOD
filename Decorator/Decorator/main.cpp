@@ -188,6 +188,7 @@ int main()
 			make_unique<CLatte>(SizeBeverage::Standart)							// Наливаем чашечку латте,
 			<< MakeCondiment<CCinnamon>()					// оборачиваем корицей,
 			<< MakeCondiment<CLemon>(2)						// добавляем пару долек лимона
+			<< MakeCondiment<CLiquor>(LiquorType::Walnut)	// добавляем ореховый ликер
 			<< MakeCondiment<CIceCubes>(2, IceCubeType::Dry)// брасаем пару кубиков сухого льда
 			<< MakeCondiment<CChocolateCrumbs>(2);			// посыпаем шоколадной крошкой
 
